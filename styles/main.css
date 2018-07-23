@@ -1,0 +1,61 @@
+body {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.tooltipClass {
+    position: absolute;
+    text-align: center;
+    /*width: 80px;*/
+    padding: 5px;
+    font: 14px sans-serif;
+    color: #F0F0F0;
+    /*font-weight: bold;*/
+    background: lightsteelblue;
+    border: 1px;
+    border-radius: 4px;
+    pointer-events: none;
+    cursor: default;
+}
+
+h2#title{
+    color: #D65076;
+    letter-spacing: 3px;
+}
+
+p#description {
+    width: 700px;
+    padding: 0 50px 30px;
+    border-bottom: 2px solid #D65076;
+    color: #222222;
+    text-align: justify;
+}
+
+a.button {
+    color: #D65076;
+}
+
+div#detailsMessage{
+    color: #BBBBBB;
+}
+
+footer{
+    width: 700px;
+    margin: 30px auto 15px;
+    border-top: 2px solid #D65076;
+    padding-top: 30px;
+    font-size: 90%;
+    text-align: center;
+    color: #333333;
+}
+footer > p{
+    margin: 0;
+}
+
+th {
+    text-align: left;
+}
+
+/* th:nth-child(2) {
+    width: 10%;
+} */

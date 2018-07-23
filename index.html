@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  #inferredDocs{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #activeButton{
+    outline: none;
+    -webkit-box-shadow: inset 0px 0px 30px #444444;
+       -moz-box-shadow: inset 0px 0px 30px #444444;
+            box-shadow: inset 0px 0px 30px #444444;
+  }
+
+  .button {
+    background-color: #BC253C; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .button1{
+    background-color: #5B5EA6; /* Blue */
+  }
+
+  .button2{
+    background-color: #009874; /* Green */
+  }
+
+  .button3{
+    background-color: #EFC04F; /* Yellow */
+  }
+
+  .button4{
+    background-color: #6F4181 /* Purple */
+  }
+
+  .button5{
+    background-color: #DD4124 /* Orange */
+  }
+
+  h2{
+    width:90%;
+    margin:0 auto;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+
+  }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pipeline Test</title>
+    <!-- Scripts -->
+    <!-- Libraries -->
+    <script src="libs/d3/d3.min.js"></script>
+    <script src="libs/d3-cloud/d3.layout.cloud.js"></script>
+    <!-- Renderers -->
+    <script src="scripts/renderers/hexmapRenderer_v001.js"></script>
+    <script src="scripts/renderers/wordcloudRenderer_v001.js"></script>
+    <script src="scripts/renderers/tableRenderer_v001.js"></script>
+    <script src="scripts/renderers/newTableRenderer.js"></script>
+    <!-- Helpers -->
+    <script src="scripts/helpers/toolTips_v001.js"></script>
+    <script src="scripts/helpers/renderingHelper.js"></script>
+    <script src="scripts/helpers/paperInteractions.js"></script>
+    <!-- Main -->
+    <script src="scripts/main.js"></script>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRaleway:regular,extra-bold" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/hexmap.css">
+    <link rel="stylesheet" type="text/css" href="resources/font/font.css">
+</head>
+<body>
+
+  <h2>The hexagon map below shows the themes that have occurred over the last 5 years of the
+    CHI Conference on Human Factors in Computing Systems. Clicking on a hexagon will display a wordcloud with keywords describing that theme in further detail
+    and also lists the top 10 papers relevant to that theme, including where in the paper they occur.</h2>
+
+  <!---<div id="inferredDocs">
+    <button class="button button0" onclick=renderColours('red')>Red Group</button>
+    <button class="button button1" onclick=renderColours('blue')>Blue Group</button>
+    <button class="button button2" onclick=renderColours('green')>Green Group</button>
+    <button class="button button3" onclick=renderColours('yellow')>Yellow Group</button>
+    <button class="button button4" onclick=renderColours('purple')>Purple Group</button>
+    <button class="button button5" onclick=renderColours('orange')>Orange Group</button>
+  </div>--->
+
+<div class="row">
+    <div>
+        <div id="hexmapDiv" class="boxed"></div>
+    </div>
+    <div class="boxed column">
+        <div id="detailsMessage">Click on a hexagon to get details.</div>
+        <div id="wordcloudDiv"></div>
+        <div id="tableDiv"></div>
+    </div>
+
+</div>
+
+<div id="hexToolTipDiv"> </div>
+
+<footer>
+    <p>Strategic Futures Laboratory. All Rights Reserved.</p>
+</footer>
+</body>
+<script>
+    var paperDetailed, topicDetailed;
+    incTable = true;
+    hexmapDataUrl = "resources/data/CHI-2018HexLayout.json";
+    topicModelDataUrl = "resources/data/CHI-2018Python.json";
+    // pieDataUrl = "resources/data/AMI60SecondsPieData.json";
+    makeAppPage(85);
+    loadDataAndRender();
+</script>
+</html>

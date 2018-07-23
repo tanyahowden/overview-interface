@@ -1,0 +1,94 @@
+.wordLevel3{
+    display: inline;
+}
+
+.wordLevel5{
+    display: none;
+}
+
+.wordLevel7{
+    display: none;
+}
+
+.topicText1Class {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font: 13px 'Open Sans', sans-serif;
+    pointer-events: none;
+    cursor: default;
+}
+.topicText2Class {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font: 11px 'Open Sans', sans-serif;
+    pointer-events: none;
+    cursor: default;
+}
+.topicText3Class {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font: 10px 'Open Sans', sans-serif;
+    pointer-events: none;
+    cursor: default;
+}
+
+.topicText4Class {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font: 8px 'Open Sans', sans-serif;
+    pointer-events: none;
+    cursor: default;
+}
+
+.topicText5Class {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font: 6px 'Open Sans', sans-serif;
+    pointer-events: none;
+    cursor: default;
+}
+
+.topicText6Class {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font: 4px 'Open Sans', sans-serif;
+    pointer-events: none;
+    cursor: default;
+}
+
+.hexborderClass{
+    stroke: #464647;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+
+.hexShapeClass{
+    stroke: #6C6C6E;
+    opacity: 0.3;
+    fill: #F5F5F5;
+    stroke-width: 1px;
+}
+.hexShapeSelect{
+    opacity: 0.4;
+    fill: #B0BEC5;
+}
+.hexHighlightClass{
+    stroke: #464647;
+    opacity: 0.0;
+    fill: none;
+    stroke-width: 5px;
+}
+
+.newHighlight{
+  stroke: #464647;
+  opacity: 0.0;
+  fill: none;
+  stroke-width: 5px;
+}
+
+.resetMouseOut {
+    opacity: 0.6;
+}
+.resetMouseOver {
+    opacity: 1;
+}
